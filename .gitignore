@@ -1,1 +1,8 @@
+.*.swp
+.vim*
+_cache/*
+_counter
 .idea
+
+vendor
+composer.phar
