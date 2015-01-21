@@ -26,6 +26,20 @@ a {
   color: white;
 }
 
+.navbar-default {
+  background: #683e18;
+}
+ 
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-family: Damion;
+  font-size: 26pt;
+}
+
 /* ----------------------------- */
 
 /* general styles */
@@ -72,7 +86,7 @@ html, body {
 }
 
 #services {
-  background-color: #306d9f;
+  background-color: #BE8A60;
   color: #ffffff;
 }
 #services .glyphicon {
@@ -235,9 +249,6 @@ footer .glyphicon:hover {
     color: #fff;
     background-color: #EF5A5C;
 }
-
-
-
 
 .price.panel-red>.panel-body .lead{
         text-shadow: 0px 3px 0px rgba(50,50,50, .3);
