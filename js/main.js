@@ -14,7 +14,7 @@
   };
 
   // initialize the map object
-  var map = new google.maps.Map(document.getElementById('google_map'), options);
+  var map = new google.maps.Map(document.getElementById('google-map'), options);
 
   // add Marker
   var marker1 = new google.maps.Marker({
