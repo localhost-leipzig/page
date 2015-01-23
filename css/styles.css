@@ -528,7 +528,7 @@ body {
   color: #f9f9f9;
   text-align: center;
 }
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   .promo {
     display: inline;
     float: left;
@@ -571,28 +571,26 @@ body {
 .promo .buy {
   margin: 1em 0 0;
 }
-.promo .button {
-  padding: 1em 3.25em;
-  border: none;
-  border-radius: 40px;
+.promo .btn-buy {
   background: #B58B65;
   color: #f9f9f9;
-  cursor: pointer;
+  border: none;
+  border-radius: none;
   text-decoration: none;
 }
-.promo .button:hover {
+.promo .btn-buy:hover {
   background: #fed136;
 }
 
-.scale .button {
+.scale .btn-buy {
   color: #fed136;
   font-weight: bold;
 }
-.scale .button:hover {
+.scale .btn-buy:hover {
   color: #fff;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   .scale {
     transform: scale(1.1);
     box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
