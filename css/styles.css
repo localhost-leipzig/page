@@ -257,7 +257,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 }
 
@@ -469,7 +469,6 @@ ul.social-buttons li a {
     height: 40px;
     border-radius: 100%;
     font-size: 2em;
-    padding: 6px 0 0 0;
     outline: 0;
     color: #fff;
     background-color: #222;
@@ -519,6 +518,7 @@ body {
 }
 
 .promo {
+  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 1em .5em 1.625em;
   padding: .25em 0 2em;
   background: /*#0F1012*/#683E18;
@@ -544,8 +544,8 @@ body {
   }
 }
 .promo h4 {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin: .25em 0 0;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 1em 0 0;
   font-size: 170%;
   font-weight: normal;
 }
@@ -572,22 +572,8 @@ body {
   margin: 1em 0 0;
 }
 .promo .btn-buy {
-  background: #B58B65;
-  color: #f9f9f9;
   border: none;
-  border-radius: none;
-  text-decoration: none;
-}
-.promo .btn-buy:hover {
-  background: #fed136;
-}
-
-.scale .btn-buy {
-  color: #fed136;
-  font-weight: bold;
-}
-.scale .btn-buy:hover {
-  color: #fff;
+  border-radius: 0px;
 }
 
 @media (min-width: 768px) {
