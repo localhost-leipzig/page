@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($result !== false) {
     respondWith(200, "Danke wir melden uns so schnell wie möglich.");
   } else {
-    respondWith(500, "Hmm, leider konnte die Nachricht nicht versendet werden. Ruf doch einfach mal an 0341/22.");
+    respondWith(500, "Hmm, leider konnte die Nachricht nicht versendet werden. Ruf doch einfach mal an 0341 - 99 39 80 20.");
   }
 } else {
   respondWith(403, "Leider kann diese Anfrage nicht bearbeitet werden.");
