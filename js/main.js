@@ -45,13 +45,18 @@
       cache: false
     }).done(function(response) {
       $('.modal-title', $modal).text("Nachricht erfolgreich gesendet.");
-      $('.modal-body', $modal).text(data.responseText);
+      $('.modal-body', $modal).text(response);
       $modal.modal('show');
+
+      // Clear the form.
+      $('#name').val('');
+      $('#email').val('');
+      $('#subject').val('');
+      $('#message').val('');
     }).fail(function(data) {
       $('.modal-title', $modal).text("Fehler beim senden.");
       $('.modal-body', $modal).text(data.responseText);
       $modal.modal('show');
-      console.log(data);
     });
   });
 
