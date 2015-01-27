@@ -1,3 +1,5 @@
+'use strict';
+
 (function (window, document, $, google) {
   // Shrink navigation
   var $document = $(document),
@@ -11,77 +13,46 @@
   $(window).scroll(checkScrolling);
   checkScrolling();
 
-  // Smooth scrolling
-  $('a.page-scroll').bind('click', function (event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top
-    }, 1000, 'swing');
-    event.preventDefault();
-  });
-
   // Closes the Responsive Menu on Menu Item Click
   $('.navbar-collapse ul li a').click(function () {
     $('.navbar-toggle:visible').click();
   });
 
-  // Form validation
-  $("input,textarea").jqBootstrapValidation({
-    preventSubmit: true,
-    submitError: function ($form, event, errors) {
-      alert(errors);
-      // additional error messages or events
-    },
-    submitSuccess: function ($form, event) {
-      event.preventDefault(); // prevent default submit behaviour
-      // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
-      var firstName = name; // For Success/Failure Message
-      // Check for white space in name for Success/Fail message
-      if (firstName.indexOf(' ') >= 0) {
-        firstName = name.split(' ').slice(0, -1).join(' ');
-      }
-      $.ajax({
-        url: "contact_me.php",
-        type: "POST",
-        data: {
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-        },
-        cache: false,
-        success: function () {
-          // Success message
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
-          $('#success > .alert-success')
-            .append('</div>');
+  $('.add-subject').bind('click', function(e) {
+    var $el = $(this),
+        subject = $el.data('subject'),
+        $formName = $('#name'),
+        $formSubject = $('#subject');
 
-          //clear all fields
-          $('#contactForm').trigger("reset");
-        },
-        error: function () {
-          // Fail message
-          $('#success').html("<div class='alert alert-danger'>");
-          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-          $('#success > .alert-danger').append('</div>');
-          //clear all fields
-          $('#contactForm').trigger("reset");
-        },
-      })
-    },
-    filter: function () {
-      return $(this).is(":visible");
-    },
+    if (subject) {
+      $formSubject.val(subject);
+      $formName[0].focus();
+    }
+  });
+
+  // Form validation
+  $('#contact-form').bind('submit', function(e) {
+    e.preventDefault();
+
+    var $form = $(this),
+        $modal = $('#contact .modal'),
+        data = $form.serialize();
+
+    $.ajax({
+      url: this.action,
+      type: 'POST',
+      data: data,
+      cache: false
+    }).done(function(response) {
+      $('.modal-title', $modal).text("Nachricht erfolgreich gesendet.");
+      $('.modal-body', $modal).text(data.responseText);
+      $modal.modal('show');
+    }).fail(function(data) {
+      $('.modal-title', $modal).text("Fehler beim senden.");
+      $('.modal-body', $modal).text(data.responseText);
+      $modal.modal('show');
+      console.log(data);
+    });
   });
 
   // GoogleMaps integration
@@ -100,7 +71,7 @@
   };
 
   // initialize the map object
-  var map = new google.maps.Map(document.getElementById('google-map'), options);
+  var map = new google.maps.Map(document.getElementById('map'), options);
 
   // add Marker
   var marker1 = new google.maps.Marker({
@@ -115,7 +86,7 @@
 
   // add information window
   var infowindow = new google.maps.InfoWindow({
-    content: '<div class="info"><strong>localhost Leipzig GbR</strong><br><br>Sternwartenstraße 31<br>04203 Leipzig</div>'
+    content: '<div class="info"><strong>localhost Leipzig GbR</strong><br><br>Sternwartenstraße 31<br>04103 Leipzig</div>'
   });
 
 })(window, document, jQuery, google);
