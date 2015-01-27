@@ -1,6 +1,15 @@
 <?php
 define('EMAIL', 'ping@localhost-leipzig.de');
 
+function respondWith($code, $message) {
+  if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+    http_response_code($code);
+    echo $message;
+  } else {
+    header('Location: index.html');
+  }
+}
+
 // Only process POST reqeusts.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $filter = [
@@ -21,9 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Check that data was sent to the mailer.
   if (!$valid) {
-    // Set a 400 (bad request) response code and exit.
-    http_response_code(400);
-    echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+    respondWith(400, "Hmm, hier wurde nicht alles korrekt ausgefüllt. Bitte versuche es nochmal.");
     exit;
   }
 
@@ -38,16 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Send the email.
   $result = mail(EMAIL, $input['subject'], $email_content, $email_headers);
   if ($result !== false) {
-    // Set a 200 (okay) response code.
-    http_response_code(200);
-    echo "Danke wir melden uns so schnell wie möglich.";
+    respondWith(200, "Danke wir melden uns so schnell wie möglich.");
   } else {
-    // Set a 500 (internal server error) response code.
-    http_response_code(500);
-    echo "Oops! Something went wrong and we couldn't send your message.";
+    respondWith(500, "Hmm, leider konnte die Nachricht nicht versendet werden. Ruf doch einfach mal an 0341/22.");
   }
 } else {
-  // Not a POST request, set a 403 (forbidden) response code.
-  http_response_code(403);
-  echo "There was a problem with your submission, please try again.";
+  respondWith(403, "Leider kann diese Anfrage nicht bearbeitet werden.");
 }
