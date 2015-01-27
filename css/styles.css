@@ -17,6 +17,7 @@ body {
     color: #fed136;
 }
 
+
 p {
     font-size: 14px;
     line-height: 1.75;
@@ -24,6 +25,11 @@ p {
 
 p.large {
     font-size: 16px;
+}
+
+
+p.small {
+  font-size: .8em;
 }
 
 a,
@@ -561,6 +567,9 @@ body {
 }
 .promo li {
   padding: .25em 0;
+}
+.promo li small {
+  font-size: .5em;
 }
 .promo .brief {
   color: #f9f9f9;
