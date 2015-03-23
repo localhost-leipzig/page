@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-
+  </head>
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -361,6 +361,23 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/main.js"></script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setDoNotTrack", true]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//stats.nogo-software.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 8]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//stats.nogo-software.de/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
   </body>
 
 </html>
