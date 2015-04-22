@@ -576,10 +576,15 @@ body {
 }
 .promo .price {
   margin: .5em 0;
-  padding: .25em 0;
+  padding: .25em;
   background: /*#292b2e*/#B58B65;
   font-size: 250%;
   color: #f9f9f9;
+}
+.promo .price table {
+  color: #683E18;
+  font-size: 50%;
+  width: 100%;
 }
 .promo .buy {
   margin: 1em 0 0;
