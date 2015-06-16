@@ -4,6 +4,7 @@ _cache/*
 _counter
 .idea
 
+/nbproject
 vendor
 composer.phar
 /.brackets.json

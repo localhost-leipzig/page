@@ -1,23 +1,7 @@
 'use strict';
-
-(function (window, document, $, google) {
-  // Shrink navigation
-  var $document = $(document),
-    checkScrolling = function () {
-      if ($document.scrollTop() > 50) {
-        $('nav').addClass('navbar-shrink');
-      } else {
-        $('nav').removeClass('navbar-shrink');
-      }
-    };
-  $(window).scroll(checkScrolling);
-  checkScrolling();
-
-  // Closes the Responsive Menu on Menu Item Click
-  $('.navbar-collapse ul li a').click(function () {
-    $('.navbar-toggle:visible').click();
-  });
-
+;(function (window, document, $, google) {
+  'use strict';
+  
   $('.add-subject').bind('click', function(e) {
     var $el = $(this),
         subject = $el.data('subject'),
@@ -26,7 +10,7 @@
 
     if (subject) {
       $formSubject.val(subject);
-      $formName[0].focus();
+      $formName.focus();
     }
   });
 

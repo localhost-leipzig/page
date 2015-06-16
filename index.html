@@ -1,384 +1,336 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>localhost GbR - Büroplatz Vermietung in Leipzig</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>localhost GbR - Büroplatz Vermietung in der Leipziger Innenstadt</title>
 
-  <meta name="description" content="Vermietung freier Büroplätze in Leipzig">
-  <meta name="keywords" content="Büroplatz, Leipzig, Büro, Miete, ">
-  <meta name="page-topic" content="Dienstleistung">
-  <meta http-equiv="content-language" content="de">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="oiIAhRMhHSx1PhcIj-1ev4Lr4hLB7O0iWuBKeD8x2Pk" />
+    <meta name="description" content="Vermietung freier Büroplätze in der Innenstadt von Leipzig.">
+    <meta name="keywords" content="Leipzig, Vermietung, Büroplatz, Miete, Besprechungsraum, Meetingraum, CoWorking, Meetings, zeitlich begrenzt">
+    <meta name="page-topic" content="Dienstleistung">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="oiIAhRMhHSx1PhcIj-1ev4Lr4hLB7O0iWuBKeD8x2Pk" />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Damion" type="text/css">
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Damion" type="text/css">
+    <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Custom Fonts -->
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand page-scroll" href="#page-top">localhost</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a class="page-scroll" href="#services">Wir bieten</a></li>
-            <li><a class="page-scroll" href="#images">Bilder</a></li>
-            <li><a class="page-scroll" href="#team">Das sind wir</a></li>
-            <li><a class="page-scroll" href="#contact">Kontakt</a></li>
-            <li><a class="page-scroll" href="#map">Karte</a></li>
-            <li><a class="page-scroll" href="#impress">Impressum</a></li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
+  <body data-spy="scroll" data-target=".sidebar">
+    <nav class="sidebar hidden-xs">
+      <h1><a href="/"><img src="img/localhost.png" alt="localhost Leipzig GbR" class="img-responsive"></a></h1>
+      <ul class="nav nav-stacked">
+        <li><a class="page-scroll" href="#service">Wir bieten</a></li>
+        <li><a class="page-scroll" href="#images">Bilder</a></li>
+        <li><a class="page-scroll" href="#team">Das sind wir</a></li>
+        <li><a class="page-scroll" href="#contact">Kontakt</a></li>
+        <li><a class="page-scroll" href="#map">Karte</a></li>
+        <li><a class="page-scroll" href="#impress">Impressum</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li><a href="https://twitter.com/localhostLE" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://github.com/localhost-leipzig" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.xing.com/companies/localhostleipziggbr" target="_blank"><i class="fa fa-xing"></i></a></li>
+      </ul>
     </nav>
-
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="intro-text">
-        </div>
-      </div>
+    
+    <header class="content visible-xs">
+      <a href="/"><img src="img/localhost.png" alt="localhost Leipzig GbR" class="img-responsive"></a>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Wir bieten</h2>
-            <h3 class="section-subheading text-muted">Arbeitspätze mit Schreibtisch und Stuhl und einen Besprechungsraum.</h3>
+    <section id="service" class="content">
+      <h2 class="section-heading">Wir bieten deiner Arbeit Raum</h2>
+      <h3 class="section-subheading">ein ruhiges Arbeitsklima und eine zentrale Lage in der Leipziger Innenstadt.</h3>
+      
+      <div id="office-space" class="row card">
+        <aside class="col-xs-12 col-md-12 col-lg-4 card-side card-side-img">
+          <img src="img/image-carousel/sunny_desk.jpg" alt="Sonniger Arbeitsplatz, aber mit Rollo" class="img-responsive">
+        </aside>
+        <div class="col-xs-12 col-md-12 col-lg-8">
+          <div class="card-inner">
+            <h3 class="card-heading">Büroplatz</h3>
+            <p class="price">ab 175 EUR</p>
+            <div class="row">
+              <div class="col-md-5">
+                <ul class="features">
+                  <li>Arbeitsplatz mit Tisch und Stuhl</li>
+                  <li>Internetzugang &amp; Festnetzflat</li>
+                  <li>separater Telefon-/Meetingraum</li>
+                  <li>monatlich kündbar</li>
+                  <li>aktuell nur noch 3 Plätze frei</li>
+                </ul>
+                <p><a class="btn btn-block btn-default btn-warning" href="tel:+4934199398020" title="0341 - 99 39 80 20">Jetzt anrufen</a></p>
+                <p><a class="btn btn-block btn-default btn-warning add-subject" data-subject="Büroplatz für 175 EUR anschauen" href="#contact" title="ping@localhost-leipzig.de">E-Mail schreiben</a></p>
+              </div>
+              <div class="col-md-7 table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td class="no-top-border"></td>
+                      <th class="no-top-border"><span class="glyphicon glyphicon-user"></span></th>
+                      <th class="no-top-border"><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span></th>
+                      <th class="no-top-border"><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span></th>
+                    </tr>
+                    <tr>
+                      <th>1 Monat</th>
+                      <td>250 €</td>
+                      <td>210 €</td>
+                      <td>175 €</td>
+                    </tr>
+                    <tr>
+                      <th>3 Monate</th>
+                      <td>210 €</td>
+                      <td>175 €</td>
+                      <td>175 €</td>
+                    </tr>
+                    <tr>
+                      <th>6 Monate</th>
+                      <td>175 €</td>
+                      <td>175 €</td>
+                      <td>175 €</td>
+                    </tr>
+                  <tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row text-center">
-          <div class="promo scale">
-              <h4>Büroplatz</h4>
-              <ul class="features">
-                <li class="brief">Monatlich</li>
-                <li class="price">
-                  ab 175 EUR
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td></td>
-                        <th>1 Person</th>
-                        <th>2 Personen</th>
-                        <th>3 Personen</th>
-                      </tr>
-                      <tr>
-                        <th>1 Monat</th>
-                        <td>250 €</td>
-                        <td>210 €</td>
-                        <td>175 €</td>
-                      </tr>
-                      <tr>
-                        <th>3 Monate</th>
-                        <td>210 €</td>
-                        <td>175 €</td>
-                        <td>175 €</td>
-                      </tr>
-                      <tr>
-                        <th>6 Monate</th>
-                        <td>175 €</td>
-                        <td>175 €</td>
-                        <td>175 €</td>
-                      </tr>
-                    <tbody>
-                  </table>
-                  <small style="font-size: 0.4em">Alle Preise verstehen sich pro Person und Monat.</small>
-                </li>
-                <li>Arbeitsplatz mit Tisch und Stuhl</li>
-                <li>Internet- &amp; Festnetzflat</li>
-                <li>separater Telefon-/Meetingraum</li>
-                <li>monatlich kündbar</li>
-                <li>aktuell 3 Plätze frei</li>
-                <li class="buy"><a class="btn btn-block btn-primary btn-buy add-subject" data-subject="Büroplatz für 250 EUR anschauen" href="#contact">Anfragen &amp; Vorbeikommen</a></li>
-              </ul>
-          </div>
-          <div class="promo">
-              <h4>Arbeitsplatz</h4>
-              <ul class="features">
-                <li class="brief">Tageskarte</li>
-                <li class="price">16 EUR</li>
-                <li>Arbeitsplatz mit Tisch und Stuhl</li>
-                <li>Internetflatrate</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li class="buy"><a class="btn btn-block btn-primary btn-buy add-subject" data-subject="Ist noch ein Arbeitsplatz frei?" href="#contact">Anfragen &amp; Vorbeikommen</a></li>
-              </ul>
-          </div>
-          <div class="promo">
-              <h4>Besprechungsraum</h4>
-              <ul class="features">
-                <li class="brief">Tageskarte</li>
-                <li class="price">50 EUR</li>
-                <li>für bis zu 8 Personen</li>
-                <li>Internetflat</li>
-                <li>Beamer</li>
-                <li>Wandtafel</li>
-                <li>&nbsp;</li>
-                <li class="buy"><a class="btn btn-block btn-primary btn-buy add-subject" data-subject="Besprechungsraum mieten" href="#contact">Anfragen</a></li>
-              </ul>
+      </div>
+
+      <div id="meeting-room" class="row card">
+        <aside class="col-xs-12 col-md-12 col-lg-4 card-side card-side-img">
+          <img src="img/image-carousel/meeting.jpg" alt="Ruhige und angenehme Atmosphere für Besprechungen" class="img-responsive">
+        </aside>
+        <div class="col-xs-12 col-md-12 col-lg-8">
+          <div class="card-inner">
+            <h3 class="card-heading">Besprechungs<wbr/>raum</h3>
+            <p class="price">50 EUR</p>
+            <div class="row">
+              <div class="col-md-5">
+                <ul class="features">
+                  <li>für bis zu 8 Personen</li>
+                  <li>Internetzugang</li>
+                  <li>Beamer</li>
+                  <li>Wandtafel</li>
+                </ul>
+                <p><a class="btn btn-block btn-default btn-warning" href="tel:+4934199398020" title="0341 - 99 39 80 20">Jetzt anrufen</a></p>
+                <p><a class="btn btn-block btn-default btn-warning add-subject" data-subject="Besprechungsraum reservieren" href="#contact" title="ping@localhost-leipzig.de">E-Mail schreiben</a></p>
+              </div>
+              <div class="col-md-7 table-responsive">
+                <ul class="features">
+                  <li>pro Tag</li>
+                  <li>von 10 - 16 Uhr</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="text-center">
-          <p class="small">Alle Preise inklusive Mehrwertsteuer.</p>
-        </div>
+      </div>
+
+      <div class="text-center">
+        <p>Komm auf einen Kaffee vorbei und schaue es dir einfach an.</p>
+        <p class="small">Alle Preise inklusive Mehrwertsteuer.</p>
       </div>
     </section>
 
     <!-- Images Section-->
-    <section id="images" class="bg-darkest-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Bilder</h2>
-            <h3 class="section-subheading text-muted">&nbsp;</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div id="carousel-images" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-images" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-images" data-slide-to="1"></li>
-              <li data-target="#carousel-images" data-slide-to="2"></li>
-              <li data-target="#carousel-images" data-slide-to="3"></li>
-              <li data-target="#carousel-images" data-slide-to="4"></li>
-            </ol>
+    <section id="images" class="content">
+      <h2 class="section-heading">Bilder</h2>
+      <h3 class="section-subheading text-muted">&nbsp;</h3>
+      <div id="carousel-images" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-images" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-images" data-slide-to="1"></li>
+          <li data-target="#carousel-images" data-slide-to="2"></li>
+          <li data-target="#carousel-images" data-slide-to="3"></li>
+          <li data-target="#carousel-images" data-slide-to="4"></li>
+        </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="img/image-carousel/sunny_desk.jpg" alt="Sonniger Arbeitsplatz, aber mit Rollo" class="img-centered img-responive">
-                <div class="carousel-caption">
-                  Sonniger Arbeitsplatz, aber mit Rollo
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/image-carousel/desks.jpg" alt="Schreibtische" class="img-centered img-responive">
-                <div class="carousel-caption">
-                  Schreibtische
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/image-carousel/chillout_area.jpg" alt="Bereich zum Entspannen" class="img-centered img-responive">
-                <div class="carousel-caption">
-                  Bereich zum Entspannen
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/image-carousel/coffee_bar.jpg" alt="Kaffeebar" class="img-centered img-responive">
-                <div class="carousel-caption">
-                  Kaffeebar
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/image-carousel/kitchen.jpg" alt="Küche" class="img-centered img-responive">
-                <div class="carousel-caption">
-                  Küche
-                </div>
-              </div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/image-carousel/sunny_desk.jpg" alt="Sonniger Arbeitsplatz, aber mit Rollo">
+            <div class="carousel-caption">
+              Sonniger Arbeitsplatz, aber mit Rollo
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-images" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-images" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+          </div>
+          <div class="item">
+            <img src="img/image-carousel/desks.jpg" alt="Schreibtische">
+            <div class="carousel-caption">
+              Schreibtische
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/image-carousel/chillout_area.jpg" alt="Bereich zum Entspannen">
+            <div class="carousel-caption">
+              Bereich zum Entspannen
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/image-carousel/coffee_bar.jpg" alt="Kaffeebar">
+            <div class="carousel-caption">
+              Kaffeebar
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/image-carousel/kitchen.jpg" alt="Küche">
+            <div class="carousel-caption">
+              Küche
+            </div>
           </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-images" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-images" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </section>
-
 
     <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Das sind wir</h2>
-            <h3 class="section-subheading text-muted"></h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img src="https://secure.gravatar.com/avatar/8177e00164c941d7e70116cefbd7c823?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" class="img-responsive img-circle" alt="">
-              <h4>Thomas Birke</h4>
-              <p class="text-muted">Freiberuflicher Software-Entwickler</p>
-              <ul class="list-inline social-buttons">
-                <li><a href="https://www.xing.com/profile/Thomas_Birke8"><i class="fa fa-xing"></i></a></li>
-                <li><a href="https://twitter.com/quafzi"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://github.com/quafzi"><i class="fa fa-github"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img src="https://secure.gravatar.com/avatar/112b85f7c0de1f533e248c4df2ca95a0?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" class="img-responsive img-circle" alt="">
-              <h4>Danilo Kühn</h4>
-              <p class="text-muted">Freiberuflicher Software-Entwickler</p>
-              <ul class="list-inline social-buttons">
-                <li><a href="http://nogo-software.de"><i class="fa fa-home"></i></a></li>
-                <li><a href="http://www.xing.com/profile/Danilo_Kuehn"><i class="fa fa-xing"></i></a></li>
-                <li><a href="https://twitter.com/cgenogo"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://twitter.com/nogo"><i class="fa fa-github"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img src="https://secure.gravatar.com/avatar/cb5cd5b98a8c3fe50b0923e3517cd4ad?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" class="img-responsive img-circle" alt="">
-              <h4>Frank Weigmann</h4>
-              <p class="text-muted">Freiberuflicher Software-Entwickler</p>
-              <ul class="list-inline social-buttons">
-                <li><a href="https://www.xing.com/profile/Frank_Weigmann2"><i class="fa fa-xing"></i></a></li>
-                <li><a href="https://twitter.com/bitundpixel"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://github.com/bitundpixel"><i class="fa fa-github"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 text-center">
-            <p class="large text-muted"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Kontakt</h2>
-            <h3 class="section-subheading text-muted">Habt ihr Fragen? Dann schreibt uns einfach.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form action="email.php" method="post" id="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Dein Name *" id="name" name="name" required data-validation-required-message="Bitte gib deinen Namen ein.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Deine E-Mail *" id="email" name="email" required data-validation-required-message="Bitte gib deine E-Mail-Adresse ein.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input type="tel" class="form-control" placeholder="Dein Anliegen *" id="subject" name="subject" required data-validation-required-message="Bitte gib dein Anliegen ein.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" placeholder="Deine Nachricht an uns *" id="message" name="message" required data-validation-required-message="Gib bitte deine Nachricht ein."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button type="submit" class="btn btn-xl">Absenden</button>
-                </div>
-              </div>
-            </form>
-            <div class="modal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title">Modal title</h4>
-                  </div>
-                  <div class="modal-body">
-                    <p>One fine body&hellip;</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Schießen</button>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="map"></section>
-
-    <footer id="impress">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-left vcard">
-            <h4>Impressum</h4>
-            <p class="small">Angaben gemäß § 5 TMG</p>
-          </div>
-          <div class="col-md-4">
+    <section id="team" class="content">
+      <h2 class="section-heading">Das sind wir</h2>
+      <h3 class="section-subheading text-muted"></h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img src="https://avatars0.githubusercontent.com/u/164261?v=3&s=150" class="img-circle" alt="Thomas Birke">
+            <h4>Thomas Birke</h4>
+            <p class="text-muted">Freiberuflicher Software-Entwickler</p>
             <ul class="list-inline social-buttons">
-              <li><a href="https://twitter.com/localhostLE"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://github.com/localhost-leipzig"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://www.xing.com/profile/Thomas_Birke8"><i class="fa fa-xing"></i></a></li>
+              <li><a href="https://twitter.com/quafzi"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://github.com/quafzi"><i class="fa fa-github"></i></a></li>
             </ul>
           </div>
-          <div class="col-md-4 text-right">
-            <span class="copyright">Copyright &copy; localhost Leipzig GbR 2015</span>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img src="https://avatars3.githubusercontent.com/u/305163?v=3&s=150" class="img-circle" alt="Danilo Kühn">
+            <h4>Danilo Kühn</h4>
+            <p class="text-muted">Freiberuflicher Software-Entwickler</p>
+            <ul class="list-inline social-buttons">
+              <li><a href="http://nogo-software.de"><i class="fa fa-home"></i></a></li>
+              <li><a href="http://www.xing.com/profile/Danilo_Kuehn"><i class="fa fa-xing"></i></a></li>
+              <li><a href="https://twitter.com/cgenogo"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://twitter.com/nogo"><i class="fa fa-github"></i></a></li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <p class="small col-md-4 text-left adr">
-            <span class="org">localhost Leipzig GbR</span><br>
-            <span class="street-address">Sternwartenstraße 31</span><br>
-            <span class="postal-code">04103</span> <span class="locality">Leipzig</span>
-            <span class="country-name">Deutschland</span>
-          </p>
-          <p class="small col-md-4">
-            Vertreten durch:<br>
-            Thomas Birke<br>
-            Danilo Kühn<br>
-            Frank Weigmann
-          </p>
-          <p class="small col-md-4 text-right">
-            Telefon: <span class="phone">0341 - 99 39 80 20</span><br>
-            E-Mail: <a class="email" href="mailto:ping@localhost-leipzig.de">ping@localhost-leipzig.de</a>
-          </p>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img src="https://avatars2.githubusercontent.com/u/205191?v=3&s=150" class="img-circle" alt="Frank Weigmann">
+            <h4>Frank Weigmann</h4>
+            <p class="text-muted">Freiberuflicher Software-Entwickler</p>
+            <ul class="list-inline social-buttons">
+              <li><a href="https://www.xing.com/profile/Frank_Weigmann2"><i class="fa fa-xing"></i></a></li>
+              <li><a href="https://twitter.com/bitundpixel"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://github.com/bitundpixel"><i class="fa fa-github"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content bg-light-gray">
+      <h2 class="section-heading">Kontakt</h2>
+      <h3 class="section-subheading text-muted">Habt ihr Fragen? Dann schreibt uns einfach.</h3>
+      <div class="row">
+        <div class="col-lg-12">
+          <form action="email.php" method="post" id="contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Dein Name *" id="name" name="name" required data-validation-required-message="Bitte gib deinen Namen ein.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Deine E-Mail *" id="email" name="email" required data-validation-required-message="Bitte gib deine E-Mail-Adresse ein.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control" placeholder="Dein Anliegen *" id="subject" name="subject" required data-validation-required-message="Bitte gib dein Anliegen ein.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Deine Nachricht an uns *" id="message" name="message" required data-validation-required-message="Gib bitte deine Nachricht ein."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button type="submit" class="btn btn-warning btn-lg btn-block">Absenden</button>
+              </div>
+            </div>
+          </form>
+          <div class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                  <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Schießen</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="content"></section>
+
+    <footer id="impress" class="content">
+      <h2 class="section-heading">Impressum</h2>
+      <h3 class="section-subheading text-muted">Angaben gemäß § 5 TMG</h3>
+      <div class="vcard row">
+        <p class="adr col-md-4">
+          <span class="org">localhost Leipzig GbR</span><br>
+          <span class="street-address">Sternwartenstraße 31</span><br>
+          <span class="postal-code">04103</span> <span class="locality">Leipzig</span>
+          <span class="country-name">Deutschland</span>
+        </p>
+        <p class="col-md-4 text-center">
+          Vertreten durch:<br>
+          Thomas Birke<br>
+          Danilo Kühn<br>
+          Frank Weigmann
+        </p>
+        <p class="col-md-4 text-right">
+          Telefon: <a class="phone" href="tel:+4934199398020">0341 - 99 39 80 20</a><br>
+          E-Mail: <a class="email" href="mailto:ping@localhost-leipzig.de">ping@localhost-leipzig.de</a>
+        </p>
       </div>
     </footer>
 
@@ -396,17 +348,19 @@
       _paq.push(["setDoNotTrack", true]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//stats.nogo-software.de/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
+      (function () {
+        var u = "//stats.nogo-software.de/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
         _paq.push(['setSiteId', 8]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
       })();
     </script>
     <noscript><p><img src="//stats.nogo-software.de/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
     <!-- End Piwik Code -->
   </body>
-
 </html>
-
